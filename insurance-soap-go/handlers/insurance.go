@@ -16,7 +16,7 @@ func NewInsuranceHandler(insuranceService *services.InsuranceService) *Insurance
 }
 
 func (h *InsuranceHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-	// Parse the incoming XML request
+
 	var request model.CalculateInsuranceRequest
 	err := xml.NewDecoder(r.Body).Decode(&request)
 	if err != nil {
@@ -24,7 +24,6 @@ func (h *InsuranceHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// Process the request
 	purchaseID := request.Body.CalculateInsurance.PurchaseID
 	insuranceAmount, insuranceCompany, err := h.insuranceService.CalculateInsurance(purchaseID)
 	if err != nil {
@@ -32,12 +31,10 @@ func (h *InsuranceHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// Generate the XML response
 	response := model.CalculateInsuranceResponse{}
 	response.Body.CalculateInsuranceResponse.InsuranceAmount = insuranceAmount
 	response.Body.CalculateInsuranceResponse.InsuranceCompany = insuranceCompany
 
-	// Write the XML response
 	w.Header().Set("Content-Type", "text/xml")
 	xml.NewEncoder(w).Encode(response)
 }

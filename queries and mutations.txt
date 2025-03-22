@@ -3,9 +3,9 @@
 mutation {
   createBankAccount(input: { 
     Id :"bank-01"
-    accountNumber: "12-8-88-83389", 
-    balance: 2500000.5, 
-    userId: 3 
+    accountNumber: "129-884-833-989", 
+    balance: 25000, 
+    userId: 5 
   }) {
     ID
     AccountNumber
