@@ -1,0 +1,46 @@
+//add bank account
+
+mutation {
+  createBankAccount(input: { 
+    Id :"bank-01"
+    accountNumber: "12-8-88-83389", 
+    balance: 2500000.5, 
+    userId: 3 
+  }) {
+    ID
+    AccountNumber
+    Balance
+    UserID
+  }
+}
+
+//getBankAccountById
+query {
+  getBankAccountById(id: "bank-01") {
+    ID
+    AccountNumber
+    Balance
+    UserID
+  }
+}
+
+
+//buycar 
+mutation {
+  canBuyCar(carID: 3, Id: 3 )  
+}
+
+mutation {
+  createInsurance(input: { 
+    purchaseId: 4 
+  }) {
+    id
+    purchaseId
+    userId
+    carId
+    dateOfContract
+    deadline
+    amount
+    companyName
+  }
+}

@@ -1,0 +1,36 @@
+type Bank {
+  ID: ID!
+  AccountNumber: String!
+  Balance: Float!
+  UserID: Int!
+}
+
+input CreateBankAccountInput {
+  Id: String!
+  accountNumber: String!
+  balance: Float!
+  userId: Int!
+}
+type Insurance {
+  id: ID!
+  purchaseId:Int!
+  userId: Int!
+  carId: Int!
+  dateOfContract: String!
+  deadline: String!
+  amount: Float!
+  companyName: String!
+}
+
+input CreateInsuranceInput {
+  id :String!
+  purchaseId: Int!
+}
+type Mutation {
+  createBankAccount(input: CreateBankAccountInput!): Bank!
+  canBuyCar(carID: Int!, Id: Int!): String!
+  createInsurance(input: CreateInsuranceInput!): Insurance!
+}
+type Query {
+  getBankAccountById(id: ID!): Bank!
+}
