@@ -1,10 +1,10 @@
 # 🚗 Car Selling Platform - Web Services Architecture
 
-This project is a microservices-based architecture for a **car selling system**, composed of multiple services using different technologies and communication protocols.
+This project is a webservice-based architecture for a **car selling system**, composed of multiple services using different technologies and communication protocols.
 
 ---
 
-## 🔐 Authentication Service (REST + JWT)
+##  Authentication Service (REST + JWT)
 
 - This service handles **user authentication and authorization**.
 - Built with **REST API** and uses **JWT (JSON Web Tokens)** for secure access.
@@ -35,7 +35,7 @@ volumes:
 
 ---
 
-## 🏦 Bank Service (GraphQL)
+##  Bank Service (GraphQL)
 
 - Built with **GraphQL**, this service provides full **CRUD operations** for bank accounts.
 - It is responsible for **checking if a user can afford a car** based on their current bank balance.
@@ -43,20 +43,20 @@ volumes:
 
 ---
 
-## 🧮 Financial Calculation Service (SOAP)
+##  Financial Calculation Service (SOAP)
 
 - A classic **SOAP web service** that calculates the **monthly payment** a user will need to make after buying a car.
 - It is integrated into the **GraphQL bank service** and called internally.
 
 ---
 
-## 🔐 Access Control
+##  Access Control
 
 All operations in the bank and financial services are **secured** — users **must be authenticated via the REST JWT service** to access any features.
 
 ---
 
-## 📦 Project Structure Overview
+##  Project Structure Overview
 
 - `AUTH JWT GO`: REST API service for user login/register and token-based access.
 - `Bank graphqlWS`: GraphQL service handling user bank data and calling the SOAP service.
@@ -67,7 +67,7 @@ All operations in the bank and financial services are **secured** — users **mu
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 1. **Start the Authentication Service**:
    ```bash
