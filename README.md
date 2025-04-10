@@ -70,11 +70,28 @@ All operations in the bank and financial services are **secured** — users **mu
 ##  Getting Started
 
 1. **Start the Authentication Service**:
+     for downloading the dependencies 
    ```bash
-   docker-compose up
+   go mod tidy 
+   ```
+   
+   ```bash
+   go run main.go 
+   ```
+   
+   ```bash
+   docker-compose up 
    ```
 
-2. **Run the other services (GraphQL and SOAP)** independently after auth is up and tokens are issued.
+3. **Run the other services (GraphQL and SOAP)** independently after auth is up and tokens are issued.
+   for downloading the dependencies 
+   ```bash
+   go mod tidy 
+   ```
+   
+   ```bash
+   go run main.go 
+   ```
 
 ---
 
