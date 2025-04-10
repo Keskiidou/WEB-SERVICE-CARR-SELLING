@@ -63,7 +63,6 @@ All operations in the bank and financial services are **secured** — users **mu
 - `insurance-soap-go`: SOAP service performing financial calculations.
 - `.gitignore`: Standard gitignore config.
 - `queries and mutations.txt`: Sample GraphQL operations.
-- `champs i probably can play.txt`: Just for fun 😉 (or maybe placeholder data?).
 
 ---
 
