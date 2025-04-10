@@ -1,6 +1,6 @@
 # 🚗 Car Selling Platform - Web Services Architecture
 
-This project is a webservice-based architecture for a **car selling system**, composed of multiple services using different technologies and communication protocols.
+This project is a webservice-based architecture for a **car selling system**, composed of  services using GOLANG  (GIN FRAMEWORK) and communication protocols.
 
 ---
 
